@@ -65,9 +65,15 @@ operations.prototype.guessWord = function(player, guessword){
 }
 
 operations.prototype.getResult = function(player){
-    
+    var data = {};
+    data.sessionId = player.sessionId;
+    data.action = "getResult";
+    this.done(player, this.core.post(data));
 }
 
 operations.prototype.submitResult = function(player){
-    
+    var data = {};
+    data.sessionId = player.sessionId;
+    data.action = "submitResult";
+    this.done(player, this.core.post(data));
 }

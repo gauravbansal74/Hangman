@@ -16,6 +16,8 @@ player.createInput = function(word){
 
 $("#startGame").on('click',function(){
     player.startGame(player);
+   // $(".secondaryPanel").show();
+   // $(".primaryPanel").hide();
 });
 
 $('#nextWord').on('click', function(){
@@ -25,5 +27,15 @@ $('#nextWord').on('click', function(){
 
 $("#guessClick").on('click', function(){
     player.guessWord(player, $("#guessWord").val());
+    player.apply();
+});
+
+$("#getResultButton").on('click', function(){
+    player.getResult(player);
+    player.apply();
+});
+
+$("#submitResultButton").on('click', function(){
+    player.submitResult(player);
     player.apply();
 });
