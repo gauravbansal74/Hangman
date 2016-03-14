@@ -6,3 +6,7 @@
 .secondaryPanel{
     display: none;
 }
+
+#guessWordContainer{
+    display:none;
+}

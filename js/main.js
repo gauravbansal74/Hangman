@@ -25,6 +25,7 @@ $("#startGame").on('click',function(){
 });
 
 $('#nextWord').on('click', function(){
+    $("#guessWordContainer").show();
     player.nextWord(player);
 });
 
@@ -39,5 +40,6 @@ $("#getResultButton").on('click', function(){
 $("#submitResultButton").on('click', function(){
     player.submitResult(player);
     $(".secondaryPanel").hide();
+    $("#guessWordContainer").hide();
     $(".primaryPanel").show();
 });
