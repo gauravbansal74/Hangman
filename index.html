@@ -5,22 +5,36 @@
         <link rel="stylesheet" href="/css/main-all.css" type="text/css" />
     </head>
     <body>
-        <div class="primaryPanel">
-             <button id="startGame">Start</button>
-        </div>
-        <div class="secondaryPanel">
-            <div>
-                <h3 id="wordContainer"></h3>
+        <div class="container">
+            <h4 id="message">Click to start Game</h4>
+             <div class="primaryPanel">
+                
+                <button id="startGame">Start</button>
             </div>
-      
-           <button id="nextWord">Get New word</button>
-            <button id="getResultButton">Getresult</button>
-           <button id="submitResultButton">Submit Result</button>
-           <div>
-                <input type="text" name="guessWord" id="guessWord"/>
-               <button id="guessClick">Guess Word</button>
-           </div>
+            <div class="secondaryPanel">
+                <div>
+                    <div>
+                        <div>Total word count : <b id="totalWordCount">0</b></div>
+                        <div>Number of Guess allowed for Each word : <b id="numberOfGuessAllowedForEachWord">0</b></div>
+                        <div>Number Of Words To Guess : <b id="numberOfWordsToGuess"></b></div>
+                        <div>Wrong Guess Count Of Current Word : <b id="wrongGuessCountOfCurrentWord">0</b></div>
+                        <div>Your Score is : <b id="score">0</b></div>
+                    </div>
+                    <h3 id="wordContainer">Click on "Get New Word"</h3>
+                </div>
+          
+               <button id="nextWord">Get New word</button>
+               <div>
+                    <input type="text" name="guessWord" id="guessWord"/>
+                   <button id="guessClick">Guess Word</button>
+               </div>
+               <div>
+                <button id="getResultButton">Getresult</button>
+                <button id="submitResultButton">Submit Result</button>
+               </div>
+            </div>
         </div>
+       
         
         <script type="text/javascript" src="/js/core.js"></script>
         <script type="text/javascript" src="/js/operations.js"></script>

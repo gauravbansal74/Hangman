@@ -5,37 +5,39 @@
 var player = new operations('gauravbansal74@gmail.com', 'https://strikingly-hangman.herokuapp.com/game/on');
 
 player.apply = function(){
-    var totalLength = this.word;
-    this.createInput(this.word);
-    
-}
+    $("#wordContainer").text(this.word);
+    $("#message").text(this.message);
+    $("#totalWordCount").text(this.totalWordCount);
+    $("#numberOfGuessAllowedForEachWord").text(this.numberOfGuessAllowedForEachWord);
+    $("#numberOfWordsToGuess").text(this.numberOfWordsToGuess);
+    $("#wrongGuessCountOfCurrentWord").text(this.wrongGuessCountOfCurrentWord);
+    $("#score").text(this.score);
+};
 
 player.createInput = function(word){
-    $("#wordContainer").text(word);
+    
 };
 
 $("#startGame").on('click',function(){
     player.startGame(player);
-   // $(".secondaryPanel").show();
-   // $(".primaryPanel").hide();
+    $(".secondaryPanel").show();
+    $(".primaryPanel").hide();
 });
 
 $('#nextWord').on('click', function(){
     player.nextWord(player);
-    player.apply();
 });
 
 $("#guessClick").on('click', function(){
     player.guessWord(player, $("#guessWord").val());
-    player.apply();
 });
 
 $("#getResultButton").on('click', function(){
     player.getResult(player);
-    player.apply();
 });
 
 $("#submitResultButton").on('click', function(){
     player.submitResult(player);
-    player.apply();
+    $(".secondaryPanel").hide();
+    $(".primaryPanel").show();
 });

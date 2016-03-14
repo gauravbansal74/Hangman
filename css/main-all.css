@@ -1,8 +1,6 @@
-.primaryPanel{
-    margin ; 0 auto;
+.container{
+     margin ; 0 auto;
     text-align:center;
-    -moz-appearance: none;
-    -webkit-appearance: none;
 }
 
 .secondaryPanel{

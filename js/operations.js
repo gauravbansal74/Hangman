@@ -37,6 +37,7 @@ operations.prototype.done = function(player,requestCom){
     requestCom.done(function(data){
         player.updateModel(player, data);
          console.log(player);
+         player.apply();
     });
     
 }
@@ -62,6 +63,7 @@ operations.prototype.guessWord = function(player, guessword){
     data.action = "guessWord";
     data.guess = guessword;
     this.done(player, this.core.post(data));
+    player.getResult(player);
 }
 
 operations.prototype.getResult = function(player){
